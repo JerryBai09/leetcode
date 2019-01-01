@@ -10,4 +10,5 @@ LeetCode exercise solutions
 |69|[Sqrtx](https://leetcode.com/problems/sqrtx/) | [C++](./Sqrt/Sqrt.cpp) |Easy|
 |4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | [C++](./MedianOfTwoSortedArray/MedianOfTwoSortedArrays.cpp) |Hard|
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++](./LongestPalindromicSubstring/LongestPalindromicSubstring.cpp) |Medium|
+|6|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [C++](./ZigZagConversion/ZigZagConversion.cpp) |Medium|
 
