@@ -12,4 +12,5 @@ LeetCode exercise solutions
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C++](./LongestPalindromicSubstring/LongestPalindromicSubstring.cpp) |Medium|
 |6|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [C++](./ZigZagConversion/ZigZagConversion.cpp) |Medium|
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C++](./ReverseInteger/ReverseInteger.cpp) |Easy|
+|8|[String to Integer](https://leetcode.com/problems/string-to-integer-atoi/) | [C++](./StringToInteger/StringToInteger.cpp) |Medium|
 
