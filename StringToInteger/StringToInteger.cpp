@@ -71,78 +71,84 @@
 // Space Complexity O(1)
 
 
-int myAtoi(string str)
-{
-    size_t startPos = str.find_first_not_of(' ');
-    if (startPos == string::npos)
-    {
-        return 0;
-    }
-
-    if (str[startPos] != '+' && str[startPos] != '-' && (str[startPos] < 48 || str[startPos] > 57))
-    {
-        return 0;
-    }
-
-    bool isNegative = false;
-    if (str[startPos] == '+' || str[startPos] == '-')
-    {
-        if (str[startPos] == '-')
+class Solution {
+public:
+    int myAtoi(string str) {
+        size_t startPos = str.find_first_not_of(' ');
+        if (startPos == string::npos)
         {
-            isNegative = true;
+            return 0;
         }
-        startPos += 1;
-    }
 
-    if (startPos >= str.length())
-    {
-        return 0;
-    }
-
-    size_t endPos = str.find_first_not_of("0123456789", startPos);
-
-    int subLen = 0;
-    if (endPos != string::npos)
-    {
-        subLen = endPos - startPos;
-    }
-    else
-    {
-        subLen = str.length() - startPos;
-    }
-
-    string numStr = str.substr(startPos, subLen);
-    if (numStr.length() > 10)
-    {
-        if (isNegative)
+        if (str[startPos] != '+' && str[startPos] != '-' && (str[startPos] < 48 || str[startPos] > 57))
         {
-            return INT_MIN;
+            return 0;
+        }
+
+        bool isNegative = false;
+        if (str[startPos] == '+' || str[startPos] == '-')
+        {
+            if (str[startPos] == '-')
+            {
+                isNegative = true;
+            }
+            startPos += 1;
+        }
+
+        if (startPos >= str.length())
+        {
+            return 0;
+        }
+
+        size_t endPos = str.find_first_not_of("0123456789", startPos);
+        int subLen = 0;
+        if (endPos != string::npos)
+        {
+            subLen = endPos - startPos;
         }
         else
         {
+            subLen = str.length() - startPos;
+        }
+        string tempNum = str.substr(startPos, subLen);
+        size_t realStart = tempNum.find_first_not_of("0");
+        if (realStart == string::npos)
+        {
+            return 0;
+        }
+        string numStr = tempNum.substr(realStart);
+        if (numStr.length() > 10)
+        {
+            if (isNegative)
+            {
+                return INT_MIN;
+            }
+            else
+            {
+                return INT_MAX;
+            }
+        }
+
+        long ans = 0;
+        for (int i = 0; i < numStr.length(); i++)
+        {
+            ans = ans * 10 + (numStr[i] - 48);
+        }
+
+        if (isNegative)
+        {
+            ans = -ans;
+        }
+
+        if (ans > INT_MAX)
+        {
             return INT_MAX;
         }
-    }
+        else if (ans < INT_MIN)
+        {
+            return INT_MIN;
+        }
 
-    long ans = 0;
-    for (int i = 0; i < numStr.length(); i++)
-    {
-        ans = ans * 10 + (numStr[i] - 48);
+        return ans;
     }
-
-    if (isNegative)
-    {
-        ans = -ans;
-    }
-
-    if (ans > INT_MAX)
-    {
-        return INT_MAX;
-    }
-    else if (ans < INT_MIN)
-    {
-        return INT_MIN;
-    }
-
-    return ans;
-}
+};
