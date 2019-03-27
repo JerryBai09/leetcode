@@ -14,4 +14,5 @@ LeetCode exercise solutions
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C++](./ReverseInteger/ReverseInteger.cpp) |Easy|
 |8|[String to Integer](https://leetcode.com/problems/string-to-integer-atoi/) | [C++](./StringToInteger/StringToInteger.cpp) |Medium|
 |9|[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [C++](./PalindromeNumber/PalindromeNumber.cpp) |Easy|
+|10|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | [C++](./RegularExpression/RegularExpression.cpp) |Hard|
 
