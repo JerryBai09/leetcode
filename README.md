@@ -18,3 +18,5 @@ LeetCode exercise solutions
 |11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C++](./ContainerWithMostWater/ContainerWithMostWater.cpp) |Medium|
 |12|[ Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [C++](./IntegertoRoman/IntegertoRoman.cpp) |Medium|
 |13|[ Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C++](./RomanToInteger/RomanToInteger.cpp) |Easy|
+|246|[Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | [C++](./StrobogrammaticNumber/strobogrammaticNumber.cpp) | Easy|
+ 
