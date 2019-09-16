@@ -19,4 +19,4 @@ LeetCode exercise solutions
 |12|[ Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [C++](./IntegertoRoman/IntegertoRoman.cpp) |Medium|
 |13|[ Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C++](./RomanToInteger/RomanToInteger.cpp) |Easy|
 |246|[Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | [C++](./StrobogrammaticNumber/strobogrammaticNumber.cpp) | Easy|
- 
+|87|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C++](./ScrambleString/ScrambleString.cpp) | Hard|
