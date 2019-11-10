@@ -20,3 +20,5 @@ LeetCode exercise solutions
 |13|[ Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C++](./RomanToInteger/RomanToInteger.cpp) |Easy|
 |246|[Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | [C++](./StrobogrammaticNumber/strobogrammaticNumber.cpp) | Easy|
 |87|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C++](./ScrambleString/ScrambleString.cpp) | Hard|
+|160|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [C++](./IntersectionofTwoLinkedLists/IntersectionofTwoLinkedLists.cpp) | Hard|
+
