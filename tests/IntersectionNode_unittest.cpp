@@ -87,17 +87,38 @@ class GTestList : public Test {
         }
 
         void SetUp() override {
-            ListNode* node = NULL;
-            int nodes[] = {4, 1, 8, 4, 5};
-            for (auto num : nodes) {
+            ListNode* nodeA = NULL;
+            int nodesA[] = {4, 1};
+            for (auto num : nodesA) {
                 if (!headA) {
-                    node = new ListNode(num);
-                    headA = node;
+                    nodeA = new ListNode(num);
+                    headA = nodeA;
                 }
                 else {
-                    node->next = new ListNode(num);
-                    node = node->next;
+                    nodeA->next = new ListNode(num);
+                    nodeA = nodeA->next;
                 }
+            }
+
+            ListNode* nodeB = NULL;
+            int nodesB[] = {5, 0, 1};
+            for (auto num : nodesB) {
+                if (!headB) {
+                    nodeB = new ListNode(num);
+                    headB = nodeB;
+                }
+                else {
+                    nodeB->next = new ListNode(num);
+                    nodeB = nodeB->next;
+                }
+            }
+
+            int nodesCom[] = {7, 8, 4, 5};
+            for (auto num : nodesCom) {
+                nodeA->next = new ListNode(num);
+                nodeA = nodeA->next;
+                nodeB->next = nodeA;
+                nodeB = nodeB->next;
             }
             std::cout << "Test fixture setup." << std::endl;
         }
@@ -121,7 +142,7 @@ class GTestList : public Test {
 
 TEST_F(GTestList, test_list_length) {
     Solution s;
-    EXPECT_EQ(5, s.getIntersectionNode(headA, headB));
+    EXPECT_EQ(7, s.getIntersectionNode(headA, headB));
 }
 
 

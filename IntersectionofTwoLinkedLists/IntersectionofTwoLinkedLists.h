@@ -1,5 +1,5 @@
 //
-// Created by 白俊彦 on 2019-11-10.
+// Created by JerryBai on 2019-11-10.
 //
 
 #ifndef LEETCODE_INTERSECTIONOFTWOLINKEDLISTS_H
