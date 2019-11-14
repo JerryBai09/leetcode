@@ -28,6 +28,8 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                     result.push_back({cur, nums[l], nums[r]});
                     l++;
                     r--;
+                    while (l < r && nums[l] == nums[l - 1]) l++;
+                    while (r > l && nums[r] == nums[r + 1]) r--;
                 }
             }
         }
@@ -39,7 +41,8 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 
 
 int main() {
-    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+//    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    vector<int> nums = {-2, 0, 0, 2, 2};
     vector<vector<int>> ans = threeSum(nums);
     for (int i = 0; i < ans.size(); i++) {
         for (int j = 0; j < ans[i].size(); j++) {
