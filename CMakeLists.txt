@@ -13,5 +13,7 @@ include_directories(
         external/googletest/googletest/include
 )
 
-add_executable(test_main  tests/IntersectionNode_unittest.cpp IntersectionofTwoLinkedLists/IntersectionofTwoLinkedLists.cpp external/googletest/googletest)
-target_link_libraries(test_main gtest_main)
+#add_executable(test_main  tests/IntersectionNode_unittest.cpp IntersectionofTwoLinkedLists/IntersectionofTwoLinkedLists.cpp external/googletest/googletest)
+#target_link_libraries(test_main gtest_main)
+add_executable(island NumofIslands/NumofIslands.cpp)
+target_link_libraries(island)
