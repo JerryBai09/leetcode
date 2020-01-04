@@ -1,5 +1,5 @@
 //
-// Created by 白俊彦 on 2020-01-01.
+// Created by JerryBai on 2020-01-01.
 //
 
 #include <vector>
@@ -22,6 +22,7 @@ void backtrack(vector<int>& vec, int l, int h, vector<vector<int> >& perm) {
     }
     else {
         for (int i = l; i <= h; i++) {
+            cout << "l: " << l << " h " << h << " i " << i << endl;
             if (l != i && vec[l] == vec[i]) continue;
             swap(vec[l], vec[i]);
             backtrack(vec, l + 1, h, perm);
