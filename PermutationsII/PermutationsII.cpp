@@ -16,26 +16,33 @@ using namespace std;
 //]
 
 
-void backtrack(vector<int>& vec, int l, int h, vector<vector<int> >& perm) {
-    if (l == h) {
-        perm.push_back(vec);
+void backtrack(vector<vector<int> >& perm, vector<int>& temp, vector<int> nums, vector<bool>& used) {
+    if (temp.size() == nums.size()) {
+        perm.push_back(temp);
     }
-    else {
-        for (int i = l; i <= h; i++) {
-            cout << "l: " << l << " h " << h << " i " << i << endl;
-            if (l != i && vec[l] == vec[i]) continue;
-            swap(vec[l], vec[i]);
-            backtrack(vec, l + 1, h, perm);
-            swap(vec[l], vec[i]);
-        }
+    // Using backtrace to list all permutations of input array
+    // used is a marker for each elements
+    // The whole process is similarly with dfs, and for each
+    // handled element, all elements of nums is candidate
+    for (int i = 0; i < nums.size(); i++) {
+        if (used[i] || (i > 0 && nums[i-1] == nums[i] && !used[i-1])) continue;
+        used[i] = true;
+        temp.push_back(nums[i]);
+        backtrack(perm, temp, nums, used);
+        used[i] = false;
+        temp.pop_back();
     }
 }
 
 vector<vector<int>> permuteUnique(vector<int>& nums) {
-    vector<vector<int> > res;
     if (nums.size() == 0) return {{}};
 
-    backtrack(nums, 0, nums.size() - 1, res);
+    vector<vector<int> > res;
+    vector<bool> used(nums.size(), false);
+    vector<int> temp;
+    sort(nums.begin(), nums.end());
+    backtrack(res, temp, nums, used);
+
     return res;
 }
 
