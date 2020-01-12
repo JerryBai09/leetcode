@@ -21,4 +21,4 @@ LeetCode exercise solutions
 |246|[Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | [C++](./StrobogrammaticNumber/strobogrammaticNumber.cpp) | Easy|
 |87|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C++](./ScrambleString/ScrambleString.cpp) | Hard|
 |160|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [C++](./IntersectionofTwoLinkedLists/IntersectionofTwoLinkedLists.cpp) | Hard|
-
+|1309|[Decrypt String from Alphabet to Integer Mapping](https://leetcode-cn.com/problems/decrypt-string-from-alphabet-to-integer-mapping/) | [C++](./AlphabetMapping/AlphabetMapping.cpp) | Easy|

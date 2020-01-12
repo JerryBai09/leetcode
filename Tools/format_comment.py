@@ -30,20 +30,22 @@ if __name__ == "__main__":
             comment = comment_mark.group(1).strip().split('\n')
         else:
             print("comment not found")
-        content = format(comment)
-        prefix_comment = r"/**********************************************************************\n"
-        postfix_comment = r"*********************************************************************/"
-        content = prefix_comment + content + postfix_comment
-        text = re.sub(emphasis_pattern, content, text)
-        temp_file = ""
-        if text:
-            temp_file = sys.argv[1] + "_bak"
-            with open(temp_file, 'w') as format_file:
-                format_file.write(text)
-        else:
-            print("No output text")
 
-        if temp_file:
-            os.system(r'mv %s %s' % (temp_file, sys.argv[1]))
-        else:
-            print("No format execution")
+        if comment:
+            content = format(comment)
+            prefix_comment = r"/**********************************************************************\n"
+            postfix_comment = r"*********************************************************************/"
+            content = prefix_comment + content + postfix_comment
+            text = re.sub(emphasis_pattern, content, text)
+            temp_file = ""
+            if text:
+                temp_file = sys.argv[1] + "_bak"
+                with open(temp_file, 'w') as format_file:
+                    format_file.write(text)
+            else:
+                print("No output text")
+
+            if temp_file:
+                os.system(r'mv %s %s' % (temp_file, sys.argv[1]))
+            else:
+                print("No format execution")
